@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@theme {
+    --font-serif: "PT Serif", serif;
+    --color-primary: #2B3D2D;
+    --color-gold-start: #BE9A6F;
+    --color-gold-end: #997D5C;
+    --color-gold: #BE9A6F;
+    
+} */
