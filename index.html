@@ -1088,7 +1088,7 @@
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
 
                 <div
-                    class="text-xl md:text-3xl font-serif font-bold text-gradient-gold tracking-wide whitespace-nowrap">
+                    class="text-lg md:text-3xl font-serif font-bold text-gradient-gold tracking-wide whitespace-nowrap">
                     Land
                 </div>
 
@@ -1099,7 +1099,7 @@
                 </svg>
 
                 <div
-                    class="text-xl md:text-3xl font-serif font-bold text-gradient-gold tracking-wide md:whitespace-nowrap text-center">
+                    class="text-lg md:text-3xl font-serif font-bold text-gradient-gold tracking-wide whitespace-nowrap text-center">
                     Phased Construction
                 </div>
 
@@ -1110,7 +1110,7 @@
                 </svg>
 
                 <div
-                    class="text-xl md:text-3xl font-serif font-bold text-gradient-gold tracking-wide md:whitespace-nowrap text-center">
+                    class="text-lg md:text-3xl font-serif font-bold text-gradient-gold tracking-wide md:whitespace-nowrap text-center">
                     Sales Absorption
                 </div>
 
@@ -1121,7 +1121,7 @@
                 </svg>
 
                 <div
-                    class="text-xl md:text-3xl font-serif font-bold text-gradient-gold tracking-wide whitespace-nowrap">
+                    class="text-lg md:text-3xl font-serif font-bold text-gradient-gold tracking-wide whitespace-nowrap">
                     Capital Recycling
                 </div>
 
@@ -2313,6 +2313,14 @@
                     indexAxis: indexAxis,
                     responsive: true,
                     maintainAspectRatio: false,
+                    layout: {
+                        padding: {
+                            top: isMobile ? 40 : 20,
+                            bottom: isMobile ? 10 : 20,
+                            left: isMobile ? 10 : 40,
+                            right: isMobile ? 10 : 40
+                        }
+                    },
 
                     scales: {
                         // Dynamic scales based on orientation
@@ -2370,21 +2378,25 @@
                         },
                         // Ensure datalabels plugin is active
                         datalabels: {
+                            rotation: isMobile ? -90 : 0,
                             color: (context) => {
                                 const value = context.dataset.data[context.dataIndex];
-                                // Adjust contrast logic if needed, but keeping original
+                                // Tall bars (inside): primary color (dark), Small bars (above/on top): white
+                                if (isMobile) return value > 10000 ? '#2B3D2D' : '#ffffff';
                                 return value > 1000 ? '#2B3D2D' : '#ffffff';
                             },
                             anchor: 'end',
                             align: (context) => {
                                 const value = context.dataset.data[context.dataIndex];
+                                if (isMobile) return value > 10000 ? 'start' : 'end';
                                 return value > 1000 ? 'start' : 'end';
                             },
+                            offset: isMobile ? 8 : 4,
                             font: {
                                 weight: 'bold',
-                                size: 14
+                                size: isMobile ? 12 : 14
                             },
-                            formatter: (value) => value
+                            formatter: (value) => value.toLocaleString()
                         }
                     }
                 }
