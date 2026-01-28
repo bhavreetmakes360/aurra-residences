@@ -139,7 +139,7 @@
             <!-- Logo area -->
             <a class="flex items-center  gap-3 cursor-pointer" href="#top">
                 <!-- Placeholder Icon -->
-                <div class="h-12 w-12 flex items-center justify-center rounded">
+                <div class="h-10 w-10 flex items-center justify-center rounded">
                     <img src="./aurra Residence.svg" alt="aurra">
                 </div>
                 <div class="flex flex-col leading-none font-serif text-gold">
@@ -288,7 +288,7 @@
     <div id="overview"
         class="relative min-h-screen overflow-hidden w-full bg-primary py-20 flex flex-col justify-center">
 
-        <div class="absolute top-1/3 md:top-10 right-0 h-full  z-0 opacity-55 md:opacity-100">
+        <div class="absolute top-1/3 md:top-10 right-0 h-full  z-0 opacity-20 ">
             <img src="./lines.png" alt="lines image">
         </div>
 
@@ -368,7 +368,7 @@
             </div>
 
             <!-- Stats Section -->
-            <div class="grid grid-cols-2 md:grid-cols-3 md:ml-[10%] lg:grid-cols-5 gap-8 mt-0 md:mt-auto pt-4">
+            <div class="lg:w-[75%] grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-0 md:mt-auto pt-4">
                 <div>
                     <div class="text-4xl lg:text-5xl font-dm-serif text-gradient-gold mb-2">300 +</div>
                     <div class="text-sm tracking-widest uppercase text-white/90 leading-relaxed font-roboto">
@@ -893,15 +893,15 @@
                 <!-- Phase Selector -->
                 <div class="flex justify-center lg:justify-start gap-3 mb-8">
                     <button data-phase="phase1" onclick="setInvestmentPhase('phase1')"
-                        class="inv-phase-btn px-5 py-2 text-xs md:text-sm font-medium tracking-wider border-2 border-transparent rounded-full transition-all duration-300 bg-gold text-white hover:border-yellow-700/60 cursor-pointer">
+                        class="inv-phase-btn px-5 py-2 text-xs md:text-sm whitespace-nowrap font-medium tracking-wider border-2 border-transparent rounded-full transition-all duration-300 bg-gold text-white hover:border-yellow-700/60 cursor-pointer">
                         Phase 1
                     </button>
                     <button data-phase="phase2" onclick="setInvestmentPhase('phase2')"
-                        class="inv-phase-btn px-5 py-2 text-xs md:text-sm font-medium tracking-wider border-2 border-transparent rounded-full transition-all duration-300 bg-gold text-white hover:border-yellow-700/60 cursor-pointer">
+                        class="inv-phase-btn px-5 py-2 text-xs md:text-sm whitespace-nowrap font-medium tracking-wider border-2 border-transparent rounded-full transition-all duration-300 bg-gold text-white hover:border-yellow-700/60 cursor-pointer">
                         Phase 2
                     </button>
                     <button data-phase="phase3" onclick="setInvestmentPhase('phase3')"
-                        class="inv-phase-btn px-5 py-2 text-xs md:text-sm font-medium tracking-wider border-2 border-transparent rounded-full transition-all duration-300 bg-gold text-white hover:border-yellow-700/60 cursor-pointer">
+                        class="inv-phase-btn px-5 py-2 text-xs md:text-sm whitespace-nowrap font-medium tracking-wider border-2 border-transparent rounded-full transition-all duration-300 bg-gold text-white hover:border-yellow-700/60 cursor-pointer">
                         Phase 3
                     </button>
                 </div>
@@ -955,7 +955,7 @@
 
                 <div
                     class="bg-brand-cream p-8 md:p-8 relative group transition-all duration-300 shadow-sm hover:shadow-md">
-                    <div class="flex justify-end w-full h-26">
+                    <div class="flex justify-end w-full h-16 md:h-26">
                         <img src="./wrench.png" class="rotate-15" alt="strength">
                     </div>
                     <h2 class="text-3xl font-serif font-bold text-gradient-gold ">Strengths</h2>
@@ -990,7 +990,7 @@
 
                 <div
                     class="bg-primary p-10 md:p-8 relative group transition-all duration-300 shadow-sm hover:shadow-md">
-                    <div class="flex justify-end w-full h-22 ">
+                    <div class="flex justify-end w-full h-16 md:h-22 ">
                         <img src="./weakness.png" class="invert" alt="weaknesses">
                     </div>
                     <h2 class="text-3xl font-serif font-bold text-gradient-gold mb-8">Weaknesses</h2>
@@ -1020,7 +1020,7 @@
 
                 <div
                     class="bg-primary p-10 md:p-8 relative group transition-all duration-300 shadow-sm hover:shadow-md">
-                    <div class="flex justify-end w-full h-22">
+                    <div class="flex justify-end w-full h-16 md:h-22">
                         <img src="./opportunities.png" alt="opportunities">
                     </div>
                     <h2 class="text-3xl font-serif font-bold text-gradient-gold mb-8">Opportunities</h2>
@@ -1055,7 +1055,7 @@
 
                 <div
                     class="bg-brand-cream p-10 md:p-8 relative group transition-all duration-300 shadow-sm hover:shadow-md">
-                    <div class="flex justify-end w-full h-22">
+                    <div class="flex justify-end w-full h-16 md:h-22">
                         <img src="./threats.png" alt="threats">
                     </div>
                     <h2 class="text-3xl font-serif font-bold text-gradient-gold mb-8">Threats</h2>
@@ -1087,6 +1087,7 @@
     </section>
 
     <!--  land and phase right bar-->
+    
     
     <div class="w-[90%] ml-auto bg-primary py-6 md:py-14 relative overflow-hidden  ">
 
@@ -1138,11 +1139,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
 
     <!-- investment Oppotrunity -->
     <section class=" rounded-t-4xl  min-h-screen flex items-center justify-center p-4  py-20  lg:pb-38"
