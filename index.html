@@ -156,6 +156,11 @@
       .overview-images > div.z-20 {
         cursor: default;
       }
+      /* Counter Animation Styling */
+      .counter {
+        display: inline-block;
+        min-width: 1ch;
+      }
     </style>
   </head>
 
@@ -521,7 +526,10 @@
             <div
               class="text-4xl lg:text-[2.7rem] font-dm-serif text-gradient-gold mb-2"
             >
-              300 +
+              <span class="counter" data-start="200" data-target="300"
+                >200</span
+              >
+              +
             </div>
             <div
               class="text-sm tracking-widest uppercase text-white/90 leading-relaxed font-roboto"
@@ -533,7 +541,7 @@
             <div
               class="text-4xl lg:text-[2.7rem] font-dm-serif text-gradient-gold mb-2"
             >
-              $ 16M
+              $ <span class="counter" data-target="16">0</span>M
             </div>
             <div
               class="text-sm tracking-widest uppercase text-white/90 leading-relaxed font-roboto"
@@ -545,7 +553,11 @@
             <div
               class="text-4xl lg:text-[2.7rem] font-dm-serif text-gradient-gold mb-2"
             >
-              18-24%
+              <span class="counter" data-target="18">0</span>-<span
+                class="counter"
+                data-target="24"
+                >0</span
+              >%
             </div>
             <div
               class="text-sm tracking-widest uppercase text-white/90 leading-relaxed font-roboto"
@@ -557,7 +569,7 @@
             <div
               class="text-4xl lg:text-[2.7rem] font-dm-serif text-gradient-gold mb-2"
             >
-              $ 0.7M
+              $ <span class="counter" data-target="0.7">0</span>M
             </div>
             <div
               class="text-sm tracking-widest uppercase text-white/90 leading-relaxed font-roboto"
@@ -569,7 +581,7 @@
             <div
               class="text-4xl lg:text-[2.7rem] font-dm-serif text-gradient-gold mb-2"
             >
-              $ 1M
+              $ <span class="counter" data-target="1">0</span>M
             </div>
             <div
               class="text-sm tracking-widest uppercase text-white/90 leading-relaxed font-roboto"
@@ -812,26 +824,28 @@
 
         <!-- Phases Grid -->
         <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 md:border-none pt-16"
+          class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 md:border-none pt-16 md:pt-0"
         >
           <!-- Phase 1 -->
           <div class="flex flex-col">
             <!-- Icon -->
-            <div class="mb-8 text-gold h-16 w-16">
+            <div class="mb-8 text-gold h-16 w-18">
               <img src="./logo1.svg" alt="Phase 1 Logo" />
             </div>
 
-            <h3 class="text-white text-xl uppercase tracking-widest mb-6">
+            <h3
+              class="text-white text-2xl font-bold uppercase tracking-widest mb-6"
+            >
               Phase 1
             </h3>
 
-            <ul class="space-y-3 text-gray-400 font-light text-sm mb-8 grow">
+            <ul class="space-y-3 text-white/80 font-light text-sm mb-8 grow">
               <li class="flex items-start gap-2">
                 <span
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Development Area:</strong>
+                  ><strong class="text-white/90 font-bold">Development Area:</strong>
                   Appr. 5,500 m2</span
                 >
               </li>
@@ -840,7 +854,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90"
+                  ><strong class="text-white/90 font-bold"
                     >Estimated Residential Units:</strong
                   >
                   90–105 Units</span
@@ -851,7 +865,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Soft Launch Phase:</strong>
+                  ><strong class="text-white/90 font-bold">Soft Launch Phase:</strong>
                   Legal structuring, architectural and engineering design,
                   statutory permits and approvals, branding, marketing, and
                   presales</span
@@ -862,7 +876,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Execution Phase:</strong> Full
+                  ><strong class="text-white/90 font-bold">Execution Phase:</strong> Full
                   project launch covering utility connections, civil and
                   structural works, and construction</span
                 >
@@ -872,7 +886,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Estimated Timeline:</strong>
+                  ><strong class="text-white/90 font-bold">Estimated Timeline:</strong>
                   15–18 months</span
                 >
               </li>
@@ -883,7 +897,7 @@
                 <div
                   class="text-4xl font-dm-serif tracking-wider text-gradient-gold mb-2"
                 >
-                  $1M +
+                  $ <span class="counter" data-target="1">0</span>M +
                 </div>
                 <div
                   class="text-xs uppercase tracking-widest text-white/80 font-roboto"
@@ -895,7 +909,7 @@
                 <div
                   class="text-4xl font-dm-serif tracking-wider text-gradient-gold mb-2"
                 >
-                  $3.5M +
+                  $ <span class="counter" data-target="3.5">0</span>M +
                 </div>
                 <div
                   class="text-xs uppercase tracking-widest text-white/80 font-roboto"
@@ -913,17 +927,19 @@
               <img src="./logo2.svg" alt="Phase 2 Logo" />
             </div>
 
-            <h3 class="text-white text-xl uppercase tracking-widest mb-6">
+            <h3
+              class="text-white text-2xl font-bold uppercase tracking-widest mb-6"
+            >
               Phase 2
             </h3>
 
-            <ul class="space-y-3 text-gray-400 font-light text-sm mb-8 grow">
+            <ul class="space-y-3 text-white/80 font-light text-sm mb-8 grow">
               <li class="flex items-start gap-2">
                 <span
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Development Area:</strong>
+                  ><strong class="text-white/90 font-bold">Development Area:</strong>
                   5,500 sqm</span
                 >
               </li>
@@ -932,7 +948,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Estimated Apartments:</strong>
+                  ><strong class="text-white/90 font-bold">Estimated Apartments:</strong>
                   95–105 units</span
                 >
               </li>
@@ -941,7 +957,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Scope:</strong> Construction of
+                  ><strong class="text-white/90 font-bold">Scope:</strong> Construction of
                   the second residential building within the master-plan</span
                 >
               </li>
@@ -950,7 +966,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Strategic Objective:</strong>
+                  ><strong class="text-white/90 font-bold">Strategic Objective:</strong>
                   Scale-up development based on confirmed Phase 1 sales traction
                   and demand.</span
                 >
@@ -960,7 +976,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Execution Approach:</strong>
+                  ><strong class="text-white/90 font-bold">Execution Approach:</strong>
                   Capital-efficient rollout using proven design &
                   contractors</span
                 >
@@ -970,7 +986,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Timeline:</strong> 14–18
+                  ><strong class="text-white/90 font-bold">Timeline:</strong> 14–18
                   months</span
                 >
               </li>
@@ -981,7 +997,7 @@
                 <div
                   class="text-4xl font-dm-serif tracking-wider text-gradient-gold mb-2"
                 >
-                  $1M +
+                  $ <span class="counter" data-target="1">0</span>M +
                 </div>
                 <div
                   class="text-xs uppercase tracking-widest text-white/80 font-roboto"
@@ -993,7 +1009,7 @@
                 <div
                   class="text-4xl font-dm-serif tracking-wider text-gradient-gold mb-2"
                 >
-                  $3.5M +
+                  $ <span class="counter" data-target="3.5">0</span>M +
                 </div>
                 <div
                   class="text-xs uppercase tracking-widest text-white/80 font-roboto"
@@ -1007,21 +1023,23 @@
           <!-- Phase 3 -->
           <div class="flex flex-col">
             <!-- Icon -->
-            <div class="mb-8 text-gold h-16 w-16">
+            <div class="mb-8 text-gold h-16 w-20">
               <img src="./logo3.png" alt="Phase 3 Logo" />
             </div>
 
-            <h3 class="text-white text-xl uppercase tracking-widest mb-6">
+            <h3
+              class="text-white text-2xl font-bold uppercase tracking-widest mb-6"
+            >
               Phase 3
             </h3>
 
-            <ul class="space-y-3 text-gray-400 font-light text-sm mb-8 grow">
+            <ul class="space-y-3 text-white/80 font-light text-sm mb-8 grow">
               <li class="flex items-start gap-2">
                 <span
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Development Area:</strong>
+                  ><strong class="text-white/90 font-bold">Development Area:</strong>
                   5,500 sqm</span
                 >
               </li>
@@ -1030,7 +1048,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Estimated Apartments:</strong>
+                  ><strong class="text-white/90 font-bold">Estimated Apartments:</strong>
                   100–110 units</span
                 >
               </li>
@@ -1039,7 +1057,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Scope:</strong> Development of
+                  ><strong class="text-white/90 font-bold">Scope:</strong> Development of
                   the final residential building, along with completion of the
                   project in-house amenities.</span
                 >
@@ -1049,7 +1067,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Execution Focus:</strong> Final
+                  ><strong class="text-white/90 font-bold">Execution Focus:</strong> Final
                   inventory release, pricing optimization, and activation of
                   amenities to support sell-through and price uplift</span
                 >
@@ -1059,7 +1077,7 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90">Estimated Timeline:</strong>
+                  ><strong class="text-white/90 font-bold">Estimated Timeline:</strong>
                   12–16 months</span
                 >
               </li>
@@ -1070,7 +1088,7 @@
                 <div
                   class="text-4xl font-dm-serif tracking-wider text-gradient-gold mb-2"
                 >
-                  $1M +
+                  $ <span class="counter" data-target="1">0</span>M +
                 </div>
                 <div
                   class="text-xs uppercase tracking-widest text-white/80 font-roboto"
@@ -1082,7 +1100,7 @@
                 <div
                   class="text-4xl font-dm-serif tracking-wider text-gradient-gold mb-2"
                 >
-                  $3.5M +
+                  $ <span class="counter" data-target="3.5">0</span>M +
                 </div>
                 <div
                   class="text-xs uppercase tracking-widest text-white/80 font-roboto"
@@ -1574,7 +1592,7 @@
     <!-- Investment Opportunity -->
     <section
       class="min-h-screen relative flex flex-col lg:flex-row overflow-hidden border-b border-gold/80"
-      id="timeline"
+      id="investment-opportunity"
     >
       <!-- Far Left Decorative Bar (Matches Image) -->
       <div
@@ -1964,7 +1982,7 @@
         </div>
 
         <div
-          class="hidden lg:block absolute top-1/2 right-0 transform -translate-y-[40%] translate-x-4 w-[45%] h-[70%] z-20 shadow-2xl rounded-sm overflow-hidden border-4 border-white"
+          class="hidden lg:block absolute top-1/2 right-0 transform -translate-y-[40%] translate-x-4 w-[45%] h-[70%] z-20 shadow-2xl rounded-sm overflow-hidden "
         >
           <img
             src="./image5.webp"
@@ -2670,31 +2688,31 @@
                 <div class="grid grid-cols-2 gap-x-16 gap-y-12  md:translate-x-[4rem]  my-10 mb-12 animate-fadeIn">
                     <div class="hover:scale-105 transition-transform duration-300">
                         <p class="font-bold mb-1 text-gradient-gold" style=" font-size: clamp(1.5rem, 8vw, 2rem); line-height: 1;">
-                            ${data.roi.contribution} <span style="font-size: 1.5rem; font-weight: 300;">+</span>
+                            $ <span class="counter" data-target="${parseFloat(data.roi.contribution.replace(/[^0-9.]/g, ""))}">${data.roi.contribution.includes("M") ? "0" : ""}</span>M <span style="font-size: 1.5rem; font-weight: 300;">+</span>
                         </p>
                         <p class=" text-[10px] md:text-xs italic text-white/50 uppercase tracking-widest font-medium leading-4">${data.roi.contributionLabel}</p>
                     </div>
                     <div class="hover:scale-105 transition-transform duration-300" style="animation-delay: 100ms">
                         <p class="font-bold mb-1 text-gradient-gold" style=" font-size: clamp(1.5rem, 8vw, 2rem); line-height: 1;">
-                            ${data.roi.returnAmount} <span style="font-size: 1.5rem; font-weight: 300;">+</span>
+                            $ <span class="counter" data-target="${parseFloat(data.roi.returnAmount.replace(/[^0-9.]/g, ""))}">${data.roi.returnAmount.includes("M") ? "0" : ""}</span>M <span style="font-size: 1.5rem; font-weight: 300;">+</span>
                         </p>
                         <p class=" text-[10px] md:text-xs italic text-white/50 uppercase tracking-widest font-medium leading-4">${data.roi.returnLabel}</p>
                     </div>
                     <div class="hover:scale-105 transition-transform duration-300" style="animation-delay: 200ms">
                         <p class="font-bold mb-1 text-gradient-gold" style=" font-size: clamp(1.5rem, 6vw, 2rem); line-height: 1;">
-                            ${data.roi.multiple}
+                            <span class="counter" data-target="${parseFloat(data.roi.multiple.replace(/[^0-9.]/g, ""))}">${data.roi.multiple.includes("x") ? "0" : ""}</span>x
                         </p>
                         <p class=" text-[10px] md:text-xs italic text-white/50 uppercase tracking-widest font-medium leading-4">${data.roi.multipleLabel}</p>
                     </div>
                     <div class="hover:scale-105 transition-transform duration-300" style="animation-delay: 300ms">
                         <p class="font-bold mb-1 text-gradient-gold" style=" font-size: clamp(1.5rem, 6vw, 2rem); line-height: 1;">
-                            ${data.roi.annualReturn}
+                            <span class="counter" data-target="${parseFloat(data.roi.annualReturn.replace(/[^0-9.]/g, ""))}">${data.roi.annualReturn.includes("%") ? "0" : ""}</span>%
                         </p>
                         <p class=" text-[10px] md:text-xs italic text-white/50 uppercase tracking-widest font-medium leading-4">${data.roi.annualLabel}</p>
                     </div>
                     <div class="col-span-2 hover:scale-105 transition-transform duration-300" style="animation-delay: 400ms">
                         <p class="font-bold mb-1 text-gradient-gold" style=" font-size: clamp(1.5rem, 6vw, 2rem); line-height: 1;">
-                            ${data.roi.term}
+                            <span class="counter" data-target="${parseFloat(data.roi.term.replace(/[^0-9.]/g, ""))}">${data.roi.term.includes("years") ? "0" : ""}</span> yrs
                         </p>
                         <p class=" text-[10px] md:text-xs italic text-white/50 uppercase tracking-widest font-medium leading-4">${data.roi.termLabel}</p>
                     </div>
@@ -2751,6 +2769,8 @@
                     </div>
                 </div>
             `;
+        // Re-initialize counters for injected content
+        animateCounters();
       }
 
       // Scroll to Top Button
@@ -3110,8 +3130,63 @@
         resizeTimer = setTimeout(renderHousingChart, 200);
       });
 
+      // Counter Animation
+      function animateCounters() {
+        const counters = document.querySelectorAll(".counter");
+        const duration = 2000; // Refined duration for a premium feel
+
+        const observerOptions = {
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const counter = entry.target;
+              const target = parseFloat(counter.getAttribute("data-target"));
+              const start = parseFloat(counter.getAttribute("data-start")) || 0;
+              const startTime = performance.now();
+              const hasDecimal = counter
+                .getAttribute("data-target")
+                .includes(".");
+
+              function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Easing function: easeOutQuart
+                const easedProgress = 1 - Math.pow(1 - progress, 4);
+
+                const currentValue = start + (target - start) * easedProgress;
+
+                if (hasDecimal) {
+                  counter.innerText = currentValue.toFixed(1);
+                } else {
+                  counter.innerText = Math.floor(currentValue);
+                }
+
+                if (progress < 1) {
+                  requestAnimationFrame(update);
+                } else {
+                  counter.innerText = target;
+                }
+              }
+
+              requestAnimationFrame(update);
+              observer.unobserve(counter);
+            }
+          });
+        }, observerOptions);
+
+        counters.forEach((counter) => observer.observe(counter));
+      }
+
+      // Initial Call
+      animateCounters();
+
       // Safe Load Fallback
       window.addEventListener("load", () => {
+        animateCounters();
         setInvestmentPhase("phase1");
         if (document.getElementById("timeline-container")) {
           setPhase("phase1");
