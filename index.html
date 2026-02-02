@@ -59,6 +59,19 @@
           var(--color-gold-end)
         );
       }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-slideUp {
+        animation: slideUp 0.4s ease-out forwards;
+      }
       /* Sliding Pill Animation */
       #active-pill {
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -395,8 +408,8 @@
       id="overview"
       class="relative min-h-screen overflow-hidden w-full bg-primary py-20 flex flex-col justify-center"
     >
-      <div class="absolute top-1/3 md:top-10 right-0 h-full z-0 opacity-20">
-        <img src="./lines.png" alt="lines image" />
+      <div class="absolute top-0 md:top-10 right-15 h-full z-0 opacity-85">
+        <img src="./lines.png" alt="lines image" class="scale-70" />
       </div>
 
       <div class="max-w-7xl mx-auto px-6 w-full h-full flex flex-col">
@@ -420,7 +433,7 @@
             </h2>
 
             <ul
-              class="space-y-4 text-gray-300 font-light leading-relaxed mt-6 font-roboto"
+              class="space-y-4 text-white font-light leading-relaxed mt-6 font-roboto"
             >
               <li class="flex items-start gap-3">
                 <span
@@ -520,7 +533,7 @@
 
         <!-- Stats Section -->
         <div
-          class="lg:w-[90%] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-0 md:mt-auto pt-4"
+          class="w-full lg:translate-x-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-0 md:mt-auto pt-4"
         >
           <div>
             <div
@@ -808,7 +821,7 @@
           >
             Development<br />Phasing
           </h2>
-          <div class="text-gray-300 font-light mt-5 text-lg space-y-4">
+          <div class="text-white font-light mt-5 text-lg space-y-4">
             <p>
               Aurra Residences will be developed through a block-by-block
               construction approach, comprising three residential blocks of
@@ -839,13 +852,17 @@
               Phase 1
             </h3>
 
-            <ul class="space-y-3 text-white/80 font-light text-sm mb-8 grow">
+            <ul
+              class="space-y-3 text-white/80 font-light text-base md:text-lg mb-8 grow"
+            >
               <li class="flex items-start gap-2">
                 <span
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Development Area:</strong>
+                  ><strong class="text-white/90 font-bold"
+                    >Development Area:</strong
+                  >
                   Appr. 5,500 m2</span
                 >
               </li>
@@ -865,7 +882,9 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Soft Launch Phase:</strong>
+                  ><strong class="text-white/90 font-bold"
+                    >Soft Launch Phase:</strong
+                  >
                   Legal structuring, architectural and engineering design,
                   statutory permits and approvals, branding, marketing, and
                   presales</span
@@ -876,8 +895,10 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Execution Phase:</strong> Full
-                  project launch covering utility connections, civil and
+                  ><strong class="text-white/90 font-bold"
+                    >Execution Phase:</strong
+                  >
+                  Full project launch covering utility connections, civil and
                   structural works, and construction</span
                 >
               </li>
@@ -886,7 +907,9 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Estimated Timeline:</strong>
+                  ><strong class="text-white/90 font-bold"
+                    >Estimated Timeline:</strong
+                  >
                   15–18 months</span
                 >
               </li>
@@ -900,7 +923,7 @@
                   $ <span class="counter" data-target="1">0</span>M +
                 </div>
                 <div
-                  class="text-xs uppercase tracking-widest text-white/80 font-roboto"
+                  class="text-sm uppercase tracking-widest text-white/80 font-roboto"
                 >
                   ESTIMATED<br />DEVELOPMENT COST
                 </div>
@@ -912,7 +935,7 @@
                   $ <span class="counter" data-target="3.5">0</span>M +
                 </div>
                 <div
-                  class="text-xs uppercase tracking-widest text-white/80 font-roboto"
+                  class="text-sm uppercase tracking-widest text-white/80 font-roboto"
                 >
                   PROJECTED<br />REVENUE
                 </div>
@@ -933,13 +956,17 @@
               Phase 2
             </h3>
 
-            <ul class="space-y-3 text-white/80 font-light text-sm mb-8 grow">
+            <ul
+              class="space-y-3 text-white/80 font-light text-base md:text-lg mb-8 grow"
+            >
               <li class="flex items-start gap-2">
                 <span
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Development Area:</strong>
+                  ><strong class="text-white/90 font-bold"
+                    >Development Area:</strong
+                  >
                   5,500 sqm</span
                 >
               </li>
@@ -948,7 +975,9 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Estimated Apartments:</strong>
+                  ><strong class="text-white/90 font-bold"
+                    >Estimated Apartments:</strong
+                  >
                   95–105 units</span
                 >
               </li>
@@ -957,8 +986,9 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Scope:</strong> Construction of
-                  the second residential building within the master-plan</span
+                  ><strong class="text-white/90 font-bold">Scope:</strong>
+                  Construction of the second residential building within the
+                  master-plan</span
                 >
               </li>
               <li class="flex items-start gap-2">
@@ -966,7 +996,9 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Strategic Objective:</strong>
+                  ><strong class="text-white/90 font-bold"
+                    >Strategic Objective:</strong
+                  >
                   Scale-up development based on confirmed Phase 1 sales traction
                   and demand.</span
                 >
@@ -976,7 +1008,9 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Execution Approach:</strong>
+                  ><strong class="text-white/90 font-bold"
+                    >Execution Approach:</strong
+                  >
                   Capital-efficient rollout using proven design &
                   contractors</span
                 >
@@ -986,8 +1020,8 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Timeline:</strong> 14–18
-                  months</span
+                  ><strong class="text-white/90 font-bold">Timeline:</strong>
+                  14–18 months</span
                 >
               </li>
             </ul>
@@ -1000,7 +1034,7 @@
                   $ <span class="counter" data-target="1">0</span>M +
                 </div>
                 <div
-                  class="text-xs uppercase tracking-widest text-white/80 font-roboto"
+                  class="text-sm uppercase tracking-widest text-white/80 font-roboto"
                 >
                   ESTIMATED<br />DEVELOPMENT COST
                 </div>
@@ -1012,7 +1046,7 @@
                   $ <span class="counter" data-target="3.5">0</span>M +
                 </div>
                 <div
-                  class="text-xs uppercase tracking-widest text-white/80 font-roboto"
+                  class="text-sm uppercase tracking-widest text-white/80 font-roboto"
                 >
                   PROJECTED<br />REVENUE
                 </div>
@@ -1033,13 +1067,17 @@
               Phase 3
             </h3>
 
-            <ul class="space-y-3 text-white/80 font-light text-sm mb-8 grow">
+            <ul
+              class="space-y-3 text-white/80 font-light text-base md:text-lg mb-8 grow"
+            >
               <li class="flex items-start gap-2">
                 <span
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Development Area:</strong>
+                  ><strong class="text-white/90 font-bold"
+                    >Development Area:</strong
+                  >
                   5,500 sqm</span
                 >
               </li>
@@ -1048,7 +1086,9 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Estimated Apartments:</strong>
+                  ><strong class="text-white/90 font-bold"
+                    >Estimated Apartments:</strong
+                  >
                   100–110 units</span
                 >
               </li>
@@ -1057,9 +1097,9 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Scope:</strong> Development of
-                  the final residential building, along with completion of the
-                  project in-house amenities.</span
+                  ><strong class="text-white/90 font-bold">Scope:</strong>
+                  Development of the final residential building, along with
+                  completion of the project in-house amenities.</span
                 >
               </li>
               <li class="flex items-start gap-2">
@@ -1067,9 +1107,11 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Execution Focus:</strong> Final
-                  inventory release, pricing optimization, and activation of
-                  amenities to support sell-through and price uplift</span
+                  ><strong class="text-white/90 font-bold"
+                    >Execution Focus:</strong
+                  >
+                  Final inventory release, pricing optimization, and activation
+                  of amenities to support sell-through and price uplift</span
                 >
               </li>
               <li class="flex items-start gap-2">
@@ -1077,7 +1119,9 @@
                   class="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
                 ></span>
                 <span
-                  ><strong class="text-white/90 font-bold">Estimated Timeline:</strong>
+                  ><strong class="text-white/90 font-bold"
+                    >Estimated Timeline:</strong
+                  >
                   12–16 months</span
                 >
               </li>
@@ -1091,7 +1135,7 @@
                   $ <span class="counter" data-target="1">0</span>M +
                 </div>
                 <div
-                  class="text-xs uppercase tracking-widest text-white/80 font-roboto"
+                  class="text-sm uppercase tracking-widest text-white/80 font-roboto"
                 >
                   ESTIMATED<br />DEVELOPMENT COST
                 </div>
@@ -1103,7 +1147,7 @@
                   $ <span class="counter" data-target="3.5">0</span>M +
                 </div>
                 <div
-                  class="text-xs uppercase tracking-widest text-white/80 font-roboto"
+                  class="text-sm uppercase tracking-widest text-white/80 font-roboto"
                 >
                   PROJECTED<br />REVENUE
                 </div>
@@ -1254,7 +1298,7 @@
               </h3>
 
               <div
-                class="space-y-6 text-gray-300 font-light leading-relaxed font-roboto text-base md:text-lg"
+                class="space-y-6 text-white font-light leading-relaxed font-roboto text-base md:text-lg"
               >
                 <p>
                   The chart illustrates a significant gap between housing demand
@@ -1360,7 +1404,7 @@
                 <h3 class="text-xl font-bold text-gold mb-2">
                   Real Estate Investors Seeking Rental Income (10%)
                 </h3>
-                <p class="text-gray-200 text-sm leading-relaxed">
+                <p class="text-gray-200 text-base md:text-lg leading-relaxed">
                   Buyers aiming for long-term rental yield from tourism-driven
                   tenants and seasonal demand.
                 </p>
@@ -1380,7 +1424,7 @@
         <div class="mb-8 flex items-center space-x-4">
           <div class="h-[1px] w-12 bg-gray-400"></div>
           <span
-            class="text-xs uppercase tracking-[0.3em] text-gray-500 font-sans"
+            class="text-sm uppercase tracking-[0.3em] text-gray-500 font-sans"
             >Economics</span
           >
         </div>
@@ -1390,7 +1434,7 @@
         </h2>
 
         <ul
-          class="md:space-y-6 space-y-4 mt-6 text-gray-700 font-sans text-sm md:text-base leading-relaxed"
+          class="md:space-y-6 space-y-4 mt-8 text-gray-700 font-sans text-base md:text-lg leading-relaxed"
         >
           <li class="flex items-center">
             <span
@@ -1714,7 +1758,7 @@
         <div class="relative z-10 max-w-2xl">
           <!-- Header -->
           <h2
-            class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-12 text-gradient-gold"
+            class="text-3xl md:text-4xl lg:text-5xl font-serif mb-12 text-gradient-gold"
           >
             Return on Investment
           </h2>
@@ -1762,7 +1806,7 @@
 
           <!-- Text Content -->
           <div
-            class="space-y-8 text-gray-300 font-light leading-relaxed mt-6 font-roboto text-lg"
+            class="space-y-8 text-white font-light leading-relaxed mt-6 font-roboto text-lg"
           >
             <p>
               Aurra Residences is promoted by a locally based team that has been
@@ -1810,6 +1854,7 @@
             class="lg:absolute lg:top-16 lg:right-[10%] md:right-[10%] mb-8 lg:mb-0 flex justify-start lg:justify-end"
           >
             <button
+              onclick="openDownloadModal()"
               class="bg-[#bfa065] hover:bg-[#a68b55] cursor-pointer text-white px-6 py-3 rounded-sm flex items-center gap-3 transition-colors duration-300 shadow-lg group active:scale-97"
             >
               <span class="font-sans font-medium tracking-wide"
@@ -1848,7 +1893,7 @@
                 </h2>
 
                 <p
-                  class="mt-8 text-gray-300 font-sans leading-relaxed text-sm md:text-base max-w-md"
+                  class="mt-8 text-white font-sans leading-relaxed text-sm md:text-base max-w-md"
                 >
                   Access detailed documentation prepared for investors and
                   partners. These materials provide comprehensive information on
@@ -1866,11 +1911,12 @@
 
               <div class="space-y-0">
                 <div
+                  onclick="openDownloadModal()"
                   class="group flex justify-between items-center border-t border-b border-white/10 py-5 transition-colors cursor-pointer"
                 >
                   <div>
                     <h4
-                      class="text-white font-medium uppercase tracking-wide text-sm md:text-base"
+                      class="text-white font-bold uppercase tracking-wide text-sm md:text-base"
                     >
                       Project Teaser
                     </h4>
@@ -1894,11 +1940,12 @@
                 </div>
 
                 <div
+                  onclick="openDownloadModal()"
                   class="group flex justify-between items-center border-b border-white/10 py-5 transition-colors cursor-pointer"
                 >
                   <div>
                     <h4
-                      class="text-white font-medium uppercase tracking-wide text-sm md:text-base"
+                      class="text-white font-bold uppercase tracking-wide text-sm md:text-base"
                     >
                       Pitch Deck
                     </h4>
@@ -1922,11 +1969,12 @@
                 </div>
 
                 <div
+                  onclick="openDownloadModal()"
                   class="group flex justify-between items-center border-b border-white/10 py-5 transition-colors cursor-pointer"
                 >
                   <div>
                     <h4
-                      class="text-white font-medium uppercase tracking-wide text-sm md:text-base"
+                      class="text-white font-bold uppercase tracking-wide text-sm md:text-base"
                     >
                       Investment Memorandum
                     </h4>
@@ -1950,11 +1998,12 @@
                 </div>
 
                 <div
+                  onclick="openDownloadModal()"
                   class="group flex justify-between items-center border-b border-white/10 py-5 transition-colors cursor-pointer"
                 >
                   <div>
                     <h4
-                      class="text-white font-medium uppercase tracking-wide text-sm md:text-base"
+                      class="text-white font-bold uppercase tracking-wide text-sm md:text-base"
                     >
                       Business Plan
                     </h4>
@@ -1982,7 +2031,7 @@
         </div>
 
         <div
-          class="hidden lg:block absolute top-1/2 right-0 transform -translate-y-[40%] translate-x-4 w-[45%] h-[70%] z-20 shadow-2xl rounded-sm overflow-hidden "
+          class="hidden lg:block absolute top-1/2 right-0 transform -translate-y-[40%] translate-x-4 w-[45%] h-[70%] z-20 shadow-2xl rounded-sm overflow-hidden"
         >
           <img
             src="./image5.webp"
@@ -2613,27 +2662,27 @@
         leftContainer.innerHTML = `
                 <!-- Capital Requirement & Deployment -->
                 <div class="animate-fadeIn">
-                    <h3 class="text-lg md:text-xl font-bold mb-4" style="color: #4A4A4A;">Capital Requirement & Deployment</h3>
-                    <ul class="space-y-3 text-xs md:text-sm lg:text-base" style="color: #4A4A4A;">
-                        <li class="flex items-start gap-3">
-                            <span class="text-gold font-bold">•</span>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6" style="color: #4A4A4A;">Capital Requirement & Deployment</h3>
+                    <ul class="space-y-4 text-lg md:text-xl" style="color: #4A4A4A;">
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold font-bold text-2xl">•</span>
                             <span>Total Capital Sought - <strong>${data.capital.totalSought}</strong></span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-gold font-bold">•</span>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold font-bold text-2xl">•</span>
                             <div>
                                 <span class="font-medium">Deployed as follows :</span>
-                                <div class="ml-4 mt-3 space-y-4">
+                                <div class="ml-6 mt-4 space-y-6">
                                     <div>
-                                        <p class="font-bold">Soft Launch <span class="font-normal">( ${data.capital.softLaunch} ) :</span></p>
-                                        <div class="ml-4 mt-1.5 space-y-1.5 opacity-90">
-                                            ${data.capital.softDetails.map((item) => `<p class="text-[0.75rem] md:text-xs flex items-center gap-2"><span class="h-[1px] w-2 bg-gray-400"></span>${item}</p>`).join("")}
+                                        <p class="font-bold text-xl">Soft Launch <span class="font-normal">( ${data.capital.softLaunch} ) :</span></p>
+                                        <div class="ml-6 mt-3 space-y-2 opacity-90">
+                                            ${data.capital.softDetails.map((item) => `<p class="text-base md:text-lg flex items-center gap-3"><span class="h-[1.5px] w-3 bg-gray-500"></span>${item}</p>`).join("")}
                                         </div>
                                     </div>
                                     <div>
-                                        <p class="font-bold">Hard Launch <span class="font-normal">( ${data.capital.hardLaunch} ) :</span></p>
-                                        <div class="ml-4 mt-1.5 space-y-1.5 opacity-90">
-                                            ${data.capital.hardDetails.map((item) => `<p class="text-[0.75rem] md:text-xs flex items-center gap-2"><span class="h-[1px] w-2 bg-gray-400"></span>${item}</p>`).join("")}
+                                        <p class="font-bold text-xl">Hard Launch <span class="font-normal">( ${data.capital.hardLaunch} ) :</span></p>
+                                        <div class="ml-6 mt-3 space-y-2 opacity-90">
+                                            ${data.capital.hardDetails.map((item) => `<p class="text-base md:text-lg flex items-center gap-3"><span class="h-[1.5px] w-3 bg-gray-500"></span>${item}</p>`).join("")}
                                         </div>
                                     </div>
                                 </div>
@@ -2644,18 +2693,18 @@
 
                 <!-- Presales & Financial Projections -->
                 <div class="animate-fadeIn" style="animation-delay: 100ms">
-                    <h3 class="text-lg md:text-xl font-bold mb-4 mt-10" style="color: #4A4A4A;">Presales & Financial Projections</h3>
-                    <ul class="space-y-3 text-xs md:text-sm lg:text-base" style="color: #4A4A4A;">
-                        <li class="flex items-start gap-3">
-                            <span class="text-gold font-bold">•</span>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 mt-12" style="color: #4A4A4A;">Presales & Financial Projections</h3>
+                    <ul class="space-y-4 text-lg md:text-xl" style="color: #4A4A4A;">
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold font-bold text-2xl">•</span>
                             <span>Presales Target: <strong>${data.presales.target}</strong></span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-gold font-bold">•</span>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold font-bold text-2xl">•</span>
                             <span>Target Sales Price (avg): <strong>${data.presales.price}</strong></span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-gold font-bold">•</span>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold font-bold text-2xl">•</span>
                             <span>Projected Revenue (Phase 1): <strong>${data.presales.revenue}</strong></span>
                         </li>
                     </ul>
@@ -2663,18 +2712,18 @@
 
                 <!-- Capital Protection & Exit Strategy -->
                 <div class="animate-fadeIn" style="animation-delay: 200ms">
-                    <h3 class="text-lg md:text-xl font-bold mb-4 mt-10" style="color: #4A4A4A;">Capital Protection & Exit Strategy</h3>
-                    <ul class="space-y-3 text-xs md:text-sm lg:text-base" style="color: #4A4A4A;">
-                        <li class="flex items-start gap-3">
-                            <span class="text-gold font-bold">•</span>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 mt-12" style="color: #4A4A4A;">Capital Protection & Exit Strategy</h3>
+                    <ul class="space-y-4 text-lg md:text-xl" style="color: #4A4A4A;">
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold font-bold text-2xl">•</span>
                             <span>Priority Return: <strong>${data.protection.priority}</strong></span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-gold font-bold">•</span>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold font-bold text-2xl">•</span>
                             <div>
                                 <span class="font-medium">Exit Routes:</span>
-                                <div class="ml-4 mt-1.5 space-y-1.5 opacity-90">
-                                    ${data.protection.exitRoutes.map((route) => `<p class="text-[10px] md:text-xs flex items-center gap-2"><span class="h-[1px] w-2 bg-gray-400"></span>${route}</p>`).join("")}
+                                <div class="ml-6 mt-3 space-y-2 opacity-90">
+                                    ${data.protection.exitRoutes.map((route) => `<p class="text-base md:text-lg flex items-center gap-3"><span class="h-[1.5px] w-3 bg-gray-500"></span>${route}</p>`).join("")}
                                 </div>
                             </div>
                         </li>
@@ -2685,87 +2734,93 @@
         // Right Side Content
         rightContainer.innerHTML = `
                 <!-- ROI Metrics -->
-                <div class="grid grid-cols-2 gap-x-16 gap-y-12  md:translate-x-[4rem]  my-10 mb-12 animate-fadeIn">
+                <div class="grid grid-cols-2 gap-x-16 gap-y-12  my-10 mb-12 animate-fadeIn">
                     <div class="hover:scale-105 transition-transform duration-300">
                         <p class="font-bold mb-1 text-gradient-gold" style=" font-size: clamp(1.5rem, 8vw, 2rem); line-height: 1;">
                             $ <span class="counter" data-target="${parseFloat(data.roi.contribution.replace(/[^0-9.]/g, ""))}">${data.roi.contribution.includes("M") ? "0" : ""}</span>M <span style="font-size: 1.5rem; font-weight: 300;">+</span>
                         </p>
-                        <p class=" text-[10px] md:text-xs italic text-white/50 uppercase tracking-widest font-medium leading-4">${data.roi.contributionLabel}</p>
+                        <p class=" text-sm md:text-base italic text-white/80 uppercase tracking-widest font-medium leading-4 mt-2">${data.roi.contributionLabel}</p>
                     </div>
                     <div class="hover:scale-105 transition-transform duration-300" style="animation-delay: 100ms">
                         <p class="font-bold mb-1 text-gradient-gold" style=" font-size: clamp(1.5rem, 8vw, 2rem); line-height: 1;">
                             $ <span class="counter" data-target="${parseFloat(data.roi.returnAmount.replace(/[^0-9.]/g, ""))}">${data.roi.returnAmount.includes("M") ? "0" : ""}</span>M <span style="font-size: 1.5rem; font-weight: 300;">+</span>
                         </p>
-                        <p class=" text-[10px] md:text-xs italic text-white/50 uppercase tracking-widest font-medium leading-4">${data.roi.returnLabel}</p>
+                        <p class=" text-sm md:text-base italic text-white/80 uppercase tracking-widest font-medium leading-4 mt-2">${data.roi.returnLabel}</p>
                     </div>
                     <div class="hover:scale-105 transition-transform duration-300" style="animation-delay: 200ms">
                         <p class="font-bold mb-1 text-gradient-gold" style=" font-size: clamp(1.5rem, 6vw, 2rem); line-height: 1;">
                             <span class="counter" data-target="${parseFloat(data.roi.multiple.replace(/[^0-9.]/g, ""))}">${data.roi.multiple.includes("x") ? "0" : ""}</span>x
                         </p>
-                        <p class=" text-[10px] md:text-xs italic text-white/50 uppercase tracking-widest font-medium leading-4">${data.roi.multipleLabel}</p>
+                        <p class=" text-sm md:text-base italic text-white/80 uppercase tracking-widest font-medium leading-4 mt-2">${data.roi.multipleLabel}</p>
                     </div>
                     <div class="hover:scale-105 transition-transform duration-300" style="animation-delay: 300ms">
                         <p class="font-bold mb-1 text-gradient-gold" style=" font-size: clamp(1.5rem, 6vw, 2rem); line-height: 1;">
                             <span class="counter" data-target="${parseFloat(data.roi.annualReturn.replace(/[^0-9.]/g, ""))}">${data.roi.annualReturn.includes("%") ? "0" : ""}</span>%
                         </p>
-                        <p class=" text-[10px] md:text-xs italic text-white/50 uppercase tracking-widest font-medium leading-4">${data.roi.annualLabel}</p>
+                        <p class=" text-sm md:text-base italic text-white/80 uppercase tracking-widest font-medium leading-4 mt-2">${data.roi.annualLabel}</p>
                     </div>
                     <div class="col-span-2 hover:scale-105 transition-transform duration-300" style="animation-delay: 400ms">
                         <p class="font-bold mb-1 text-gradient-gold" style=" font-size: clamp(1.5rem, 6vw, 2rem); line-height: 1;">
                             <span class="counter" data-target="${parseFloat(data.roi.term.replace(/[^0-9.]/g, ""))}">${data.roi.term.includes("years") ? "0" : ""}</span> yrs
                         </p>
-                        <p class=" text-[10px] md:text-xs italic text-white/50 uppercase tracking-widest font-medium leading-4">${data.roi.termLabel}</p>
+                        <p class=" text-sm md:text-base italic text-white/80 uppercase tracking-widest font-medium leading-4 mt-2">${data.roi.termLabel}</p>
                     </div>
                 </div>
 
                 <!-- Investment Structure -->
-                <div class="animate-fadeIn" style="animation-delay: 500ms">
-                    <h3 class="font-serif font-bold mb-10 text-gradient-gold" style=" font-size: clamp(1.8rem, 5vw, 2.5rem);">Investment Structure</h3>
+                <div class="animate-fadeIn mt-16" style="animation-delay: 500ms">
+                    <h3 class="font-dm-serif mb-12 text-gradient-gold" style=" font-size: clamp(2rem, 6vw, 2.8rem);">Investment Structure</h3>
                     
-                    <div class="space-y-6 text-[11px] md:text-sm">
-                        <div class="grid grid-cols-2 gap-x-12 pb-4 border-b border-white/5 group hover:bg-white/5 p-2 rounded-lg transition-colors">
+                    <div class="space-y-10">
+                        <div class="grid grid-cols-2 gap-x-12">
                             <div>
-                                <p class="text-white/40 mb-1.5 text-[0.6rem] md:text-[0.7rem] uppercase tracking-wider font-semibold">Investment Type</p>
-                                <p class="italic text-base md:text-lg text-gradient-gold">${data.structure.type}</p>
+                                <p class="text-white text-lg md:text-xl font-roboto mb-1">Investment Type</p>
+                                <p class="font-roboto italic text-lg md:text-xl text-gradient-gold">${data.structure.type}</p>
                             </div>
-                            <div class="text-right flex flex-col justify-end">
-                                <p class="text-white/40 mb-1.5 text-[0.6rem] md:text-[0.7rem] uppercase tracking-wider font-semibold">Investment Amount</p>
-                                <p class="text-lg md:text-xl font-bold text-gradient-gold">${data.structure.amount}</p>
+                            <div class="text-right">
+                                <p class="text-white text-lg md:text-xl font-roboto mb-1">Investment Amount</p>
+                                <p class="font-roboto italic text-lg md:text-xl text-gradient-gold">${data.structure.amount}</p>
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-2 gap-x-12 pb-4 border-b border-white/5 group hover:bg-white/5 p-2 rounded-lg transition-colors">
+                        <div class="grid grid-cols-2 gap-x-12">
                             <div>
-                                <p class="text-white/40 mb-1.5 text-[0.6rem] md:text-[0.7rem] uppercase tracking-wider font-semibold">Term</p>
-                                <p class="italic text-base md:text-lg text-gradient-gold">${data.structure.term}</p>
+                                <p class="text-white text-lg md:text-xl font-roboto mb-1">Term</p>
+                                <p class="font-roboto italic text-lg md:text-xl text-gradient-gold">${data.structure.term}</p>
                             </div>
-                            <div class="text-right flex flex-col justify-end">
-                                <p class="text-white/40 mb-1.5 text-[0.6rem] md:text-[0.7rem] uppercase tracking-wider font-semibold">Preferred Return</p>
-                                <p class="text-lg md:text-xl font-bold text-gradient-gold">${data.structure.preferredReturn}</p>
+                            <div class="text-right">
+                                <p class="text-white text-lg md:text-xl font-roboto mb-1">Preferred Return</p>
+                                <p class="font-roboto italic text-lg md:text-xl text-gradient-gold">${data.structure.preferredReturn}</p>
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-2 gap-x-12 pb-4 border-b border-white/5 group hover:bg-white/5 p-2 rounded-lg transition-colors">
+                        <div class="grid grid-cols-2 gap-x-12">
                             <div>
-                                <p class="text-white/40 mb-1.5 text-[0.6rem] md:text-[0.7rem] uppercase tracking-wider font-semibold">Profit Share</p>
-                                <p class="italic text-base md:text-lg text-gradient-gold">${data.structure.profitShare}</p>
+                                <p class="text-white text-lg md:text-xl font-roboto mb-1">Profit Share</p>
+                                <p class="font-roboto italic text-lg md:text-xl text-gradient-gold">${data.structure.profitShare}</p>
                             </div>
-                            <div class="text-right flex flex-col justify-end">
-                                <p class="text-white/40 mb-1.5 text-[0.6rem] md:text-[0.7rem] uppercase tracking-wider font-semibold">Capital Protection</p>
-                                <p class="italic text-base md:text-lg text-gradient-gold">${data.structure.capitalProtection}</p>
+                            <div class="text-right">
+                                <p class="text-white text-lg md:text-xl font-roboto mb-1">Capital Protection</p>
+                                <p class="font-roboto italic text-lg md:text-xl text-gradient-gold">${data.structure.capitalProtection}</p>
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-                            <div class="group hover:bg-white/5 p-2 rounded-lg transition-colors">
-                                <p class="text-white/40 mb-1.5 text-[0.6rem] md:text-[0.7rem] uppercase tracking-wider font-semibold">Exit Option</p>
-                                <p class="italic text-[11px] md:text-sm leading-relaxed text-gradient-gold">${data.structure.exitOption}</p>
+                        <div class="grid grid-cols-2 gap-x-12">
+                            <div>
+                                <p class="text-white text-lg md:text-xl font-roboto mb-1">Exit Option</p>
+                                <p class="font-roboto italic text-base md:text-lg leading-relaxed text-gradient-gold">${data.structure.exitOption}</p>
                             </div>
-                            <div class="group hover:bg-white/5 p-2 rounded-lg transition-colors">
-                                <p class="text-white/40 mb-1.5 text-[0.6rem] md:text-[0.7rem] uppercase tracking-wider font-semibold">Equity Conversion</p>
-                                <p class="italic text-[10px] md:text-xs leading-relaxed text-gradient-gold">${data.structure.equityConversion}</p>
+                            <div class="text-right">
+                                <p class="text-white text-lg md:text-xl font-roboto mb-1">Equity Conversion</p>
+                                <p class="font-roboto italic text-base md:text-lg leading-relaxed text-gradient-gold whitespace-pre-line">${data.structure.equityConversion.replace("(", "\n(")}</p>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="mt-16 text-center">
+                        <p class="text-white/60 text-base font-roboto cursor-pointer hover:text-white/90 transition-colors" onclick="openDownloadModal()">
+                            Note : Complete details available in the <span class="text-gold border-b border-gold/40 hover:border-gold transition-colors">Investment Memorandum</span>
+                        </p>
                     </div>
                 </div>
             `;
@@ -3192,6 +3247,158 @@
           setPhase("phase1");
         }
       });
+
+      // Download Modal Functions
+      function openDownloadModal() {
+        const modal = document.getElementById("downloadModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.classList.add("overflow-hidden");
+        document.documentElement.classList.add("overflow-hidden");
+      }
+
+      function closeDownloadModal() {
+        const modal = document.getElementById("downloadModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        document.body.classList.remove("overflow-hidden");
+        document.documentElement.classList.remove("overflow-hidden");
+      }
+
+      function handleDownloadSubmit(event) {
+        event.preventDefault();
+        const button = event.target.querySelector("button[type='submit']");
+        const originalText = button.innerHTML;
+
+        button.innerHTML = "Processing...";
+        button.disabled = true;
+
+        // Simulate preparation
+        setTimeout(() => {
+          button.innerHTML = "Success! Starting Download...";
+          setTimeout(() => {
+            closeDownloadModal();
+            button.innerHTML = originalText;
+            button.disabled = false;
+            event.target.reset();
+            alert("Your download will start shortly. Thank you!");
+          }, 1500);
+        }, 1500);
+      }
     </script>
+
+    <!-- Download Modal -->
+    <div
+      id="downloadModal"
+      class="fixed inset-0 z-[9999] hidden flex-col bg-[#26362e]/95 backdrop-blur-md overflow-y-auto pt-4 pb-4"
+    >
+      <div
+        class="min-h-full w-full flex items-center justify-center p-4"
+        onclick="if (event.target === this) closeDownloadModal();"
+      >
+        <div
+          class="relative bg-white w-full max-w-lg rounded-sm shadow-2xl overflow-hidden animate-slideUp"
+        >
+          <button
+            onclick="closeDownloadModal()"
+            class="absolute top-4 right-4 text-gray-400 hover:text-[#2b3d2d] transition-colors cursor-pointer z-20"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+          <div class="p-8 md:p-12 relative">
+            <h3 class="text-3xl font-serif font-bold text-[#2b3d2d] mb-2">
+              Access Resources
+            </h3>
+            <p
+              class="text-gray-600 mb-8 font-roboto text-xs uppercase tracking-widest"
+            >
+              Please provide your details to download
+            </p>
+
+            <form
+              id="downloadForm"
+              onsubmit="handleDownloadSubmit(event)"
+              class="space-y-6"
+            >
+              <div>
+                <label
+                  class="block text-xs uppercase tracking-widest text-gray-500 mb-2 font-medium"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  required
+                  class="w-full border-b border-gray-300 py-2 outline-none focus:border-[#bfa065] transition-colors font-roboto text-[#2b3d2d]"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    class="block text-xs uppercase tracking-widest text-gray-500 mb-2 font-medium"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    required
+                    class="w-full border-b border-gray-300 py-2 outline-none focus:border-[#bfa065] transition-colors font-roboto text-[#2b3d2d]"
+                    placeholder="name@example.com"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-xs uppercase tracking-widest text-gray-500 mb-2 font-medium"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    required
+                    class="w-full border-b border-gray-300 py-2 outline-none focus:border-[#bfa065] transition-colors font-roboto text-[#2b3d2d]"
+                    placeholder="+00 000 000 000"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  class="block text-xs uppercase tracking-widest text-gray-500 mb-2 font-medium"
+                  >Select Catalogue Pack</label
+                >
+                <select
+                  required
+                  class="w-full border-b border-gray-300 py-2 outline-none focus:border-[#bfa065] transition-colors font-roboto bg-transparent cursor-pointer text-[#2b3d2d]"
+                >
+                  <option value="" disabled selected>Choose a package</option>
+                  <option value="phase1">Project Teaser</option>
+                  <option value="phase2">Pitch Deck</option>
+                  <option value="phase3">Investment Memorandum</option>
+                  <option value="financial">Business Plan</option>
+                  <option value="all">
+                    Complete Investor Bundle (All Packs)
+                  </option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-[#bfa065] text-white py-4 font-bold uppercase tracking-widest hover:bg-[#a68b55] transition-all duration-300 shadow-lg active:scale-98 cursor-pointer mt-4"
+              >
+                Download Now
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
